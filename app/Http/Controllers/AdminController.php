@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreAdminRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -19,7 +20,23 @@ class AdminController extends Controller
 
     //Enregistrer un Admin en Base de donnee  et envoyer un mail
 
-    public function store(){
-        
+    public function store(StoreAdminRequest $request){
+        try {
+            //logique de la creation du compte
+
+
+        } catch (Exception $e) {
+           // dd($e);
+            throw new Exception('Une erreur est survenue lors de la creation de cet administrateur');
+        }
+    }
+
+    public function update(UpdateAdminRequest $request, User $user)
+    {
+        try {
+            //code...
+        } catch (Exception $e) {
+            //throw $th;
+        }
     }
 }
