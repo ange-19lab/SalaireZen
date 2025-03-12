@@ -34,6 +34,16 @@ class AdminController extends Controller
     public function update(UpdateAdminRequest $request, User $user)
     {
         try {
+            //Logique de la mise a jour de compte
+        } catch (Exception $e) {
+            //dd($e);
+            throw new Exception('Une erreeur est survenue lors de la mise a jour des informations de l\'utilisateur');
+        }
+    }
+
+    public function delete(User $user)
+    {
+        try {
             //code...
         } catch (Exception $e) {
             //throw $th;
